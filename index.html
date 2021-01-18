@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="kr">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_buwK1i9hzMwrZ4nRkR9sr');
+        })();
+    </script>
+ <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/integration
+            emailjs.init('user_buwK1i9hzMwrZ4nRkR9sr');
+        })();
+    </script>
+    
+    <script type="text/javascript">
+        window.onload = function() {
+            document.getElementById('contact-form').addEventListener('submit', function(event) {
+                event.preventDefault();
+                // generate a five digit number for the contact_number variable
+                this.contact_number.value = Math.random() * 100000 | 0;
+                // these IDs from the previous steps
+                emailjs.sendForm('service_b3naq1e', 'template_wh3ebsv', this)
+                    .then(function() {
+                        console.log('SUCCESS!');
+                        alert("문의 내역이 접수 되었습니다.");
+                    
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        alert("알수없는 에러 전화로 문의 해주세요.");
+                    });
+            });
+        }
+    </script>  
+     
+</head>
+<body>
+    
+ <nav>
+        <div class="sub_nav_0">
+        
+        <div class="logo">
+        <p>로고부분</p>
+        </div>
+        
+        <ul>
+            <li><p>게시판</p></li>
+            <li><p>견적문의</p></li>
+            <li><p>포트폴리오</p></li>
+            <li><p>회사소개</p></li>
+            
+        </ul>
+        </div>
+        
+         <div class="sub_nav_1">
+     
+        <ul>
+            <li><p>게시판</p></li>
+            <li><p>견적문의</p></li>
+            <li><p>포트폴리오</p></li>
+            <li><p>회사소개</p></li>
+            
+        </ul>
+        </div>
+        
+     </nav>   
+     
+<div class="cf"></div>
+        
+        <article>
+        <ul>
+        <li>
+        
+        <img src="img/main_image_0.png" alt="image_0">
+        </li>
+        
+        <li>
+        <img src="img/main_image_1.png" alt="image_1">
+        </li>
+        
+        <li>
+          <img src="img/main_image_2.png" alt="image_2">
+        </li>        
+        </ul>
+        </article> 
+        
+        <div class="cf"></div>
+        
+        
+    <div class="all_b_and_a">
+        
+    <h2 class="ba_text">Before After</h2>
+      
+     <ul class="b_and_a">
+              
+               <li>
+                  
+                   <div class="image_box">
+                       <div class="image_box_on image_box_on_0">
+                           <div class="image_button image_button_0">
+                               
+                           </div>
+                       </div>
+                   </div>
+                   <p>그린 하우스</p>
+               </li>
+               
+               <li>
+                  
+                   <div class="image_box">
+                       <div class="image_box_on image_box_on_1">
+                            <div class="image_button image_button_1"></div>
+                           
+                       </div>
+                       
+                   </div>
+                   <p>그린 하우스</p>
+               </li>
+               
+               <li>
+                 
+                   <div class="image_box">
+                        <div class="image_box_on image_box_on_2">
+                             <div class="image_button image_button_2"></div>
+                            
+                        </div>
+                       
+                   </div>
+                   <p>그린 하우스</p>
+               </li>
+               
+                <li>
+                
+                   <div class="image_box">
+                         <div class="image_box_on image_box_on_3">
+                             <div class="image_button image_button_3"></div>
+                             
+                         </div>
+                   </div>
+                   <p>그린 하우스</p>
+               </li>
+               
+                <li>
+                   <div class="image_box_gallery">
+                        <p>이미지가 들어갈 곳 입니다.</p>
+                   </div>
+                   <p>제목</p>
+               </li>
+               
+               <li>
+                   <div class="image_box_gallery">
+                        <p>이미지가 들어갈 곳 입니다.</p>
+                   </div>
+                   <p>제목</p>
+               </li>
+               
+               <li>
+                   <div class="image_box_gallery">
+                        <p>이미지가 들어갈 곳 입니다.</p>
+                   </div>
+                   <p>제목</p>
+               </li>
+               
+               <li>
+                   <div class="image_box_gallery">
+                        <p>이미지가 들어갈 곳 입니다.</p>
+                   </div>
+                   <p>제목</p>
+               </li>
+               
+               
+           </ul>
+</div>
+  
+  
+  
+    <div class="about_id">
+        <h2 class="art_title">아트아이디</h2>
+        <p>아트아이디 소개 글입니다.</p>
+         </div>
+  
+
+  
+<main>
+      
+ <div class="main_cover">
+
+       <aside>
+       <ul>
+           <li>
+             <div class="in_icon"></div>
+              <h2>대제목</h2>
+               <p>소제목 적용 부분</p>
+           </li>
+           
+            <li>
+             <div class="in_icon"></div>
+              <h2>대제목</h2>
+               <p>소제목 적용 부분</p>
+           </li>
+           
+            <li>
+             <div class="in_icon"></div>
+              <h2>대제목</h2>
+               <p>소제목 적용 부분</p>
+           </li>
+           
+             <li>
+             <div class="in_icon"></div>
+              <h2>대제목</h2>
+               <p>소제목 적용 부분</p>
+           </li>
+       </ul>
+        </aside>   
+
+   
+         
+     </div>
+
+   
+        <div class="cf"></div>
+        
+    <div class="main_inquiry">
+        
+        <h2> 공사문의 </h2>
+        
+         <form id="contact-form"> 
+   <!-- 아래 input은 보낼 시 꼭 필요함 --> 
+   <input type="hidden" name="contact_number"> 
+   <label>Name</label> <input type="text" name="to_name"> 
+   <label>From Name</label> 
+   <input type="text" name="from_name"> 
+   <label>Message</label> 
+   
+   <textarea name="contact"></textarea> 
+   <label>Message</label> 
+   
+   <textarea name="contact"></textarea> 
+   <label>Message</label> 
+   
+   <textarea name="contact"></textarea> 
+   
+   <input type="submit" value="Send">
+   
+   </form>
+        
+    </div>
+
+</main>
+
+
+
+<script src="script.js"></script> 
+
+</body>
+</html>
