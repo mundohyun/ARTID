@@ -8,37 +8,30 @@ var image_index = 3;
 var image_index_sub = 1;
 
 
-    if (width <= 1200) {
-        main.style.width = "100%";
-        b_and_a.style.width = "900px";
-        document.querySelector(".sub_nav_0").style.display = "none";
-        document.querySelector(".sub_nav_1").style.display = "none";
-        
-    } else {
-        main.style.width = "100%";
-        b_and_a.style.width = "1800px";
-        document.querySelector(".sub_nav_0").style.display = "none";
-        document.querySelector(".sub_nav_1").style.display = "none";
-    };
 
+
+if(width > 768){
 
 window.addEventListener("resize",function(){
-    var width = window.innerWidth;
     
-    if (width <= 1200) {
-        main.style.width = "100%";
-        b_and_a.style.width = "900px";
-        document.querySelector(".sub_nav_0").style.display = "none";
-        document.querySelector(".sub_nav_1").style.display = "block";
-        
-    } else {
-        main.style.width = "100%";
-        b_and_a.style.width = "1800px";
-        document.querySelector(".sub_nav_0").style.display = "block";
-        document.querySelector(".sub_nav_1").style.display = "none";
-    };
+    var all_b_and_a = document.querySelector(".all_b_and_a");
+    var about_id = document.querySelector(".about_id");
+    var all_main = document.querySelector("main");
     
-    });
+    
+    
+    var winwidth = window.innerWidth;
+    
+    var cal_widht = winwidth * 0.52;
+    
+    
+    all_b_and_a.style.top = cal_widht + "px";
+    all_main.style.top = cal_widht + "px";
+    about_id.style.top = cal_widht + "px";
+    
+});
+};
+
 
 setInterval(function () {
     var mainimage = document.querySelector("article ul li:nth-child("+image_index+")");
@@ -85,7 +78,7 @@ image_button_0.addEventListener("touchstart",function(){
    
     set_time_add_m();
 });
-
+ 
 window.addEventListener("mouseup",function(){
 window.removeEventListener("mousemove",get_move);
 });
@@ -107,13 +100,24 @@ window.removeEventListener("touchmove",get_touch);
 };
 
  function get_move(){
-     
+   
     var move_x = event.pageX;
     var get_move_X = move_x - main_x;
     var sub_width = get_box_width + get_move_X;
      
     box_on.style.width = sub_width + "px";
+     
+     if(sub_width <= 50){
+        box_on.style.width = "51" + "px";
+    }else if(sub_width >= 410){
+        
+        box_on.style.width = "409" + "px";
+       };
+
+    
+     
 };
+
 
 function set_time_add_p(){
     window.addEventListener("mousemove", get_move);
