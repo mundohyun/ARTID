@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="kr">
 <head>
-    <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no">
+    <meta charset="UTF-8" name="viewport" content="width=device-width, user-scalable=no, initial-scale=1">
     <title>Document</title>
+    
     <link rel="stylesheet" type="text/css" href="style.css">
-  
+    
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    
      <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
     <script type="text/javascript">
         (function() {
@@ -33,16 +37,17 @@
                     
                     }, function(error) {
                         console.log('FAILED...', error);
-                        alert("알수없는 에러 전화로 문의 해주세요!.");
+                        alert("알수없는 에러 전화로 문의 해주세요.");
                     });
             });
-        }
+        };
     </script>  
      
 </head>
 <body>
-    
- <nav>
+   
+
+<nav>
         <div class="sub_nav_0">
         
         <div class="logo">
@@ -59,7 +64,11 @@
         </div>
         
          <div class="sub_nav_1">
-     
+         
+           <h3>로고</h3>
+          
+           <h2>메뉴</h2>
+       
         <ul>
             <li><p>게시판</p></li>
             <li><p>견적문의</p></li>
@@ -91,13 +100,15 @@
         </article> 
         
         <div class="cf"></div>
-        
+ 
         
     <div class="all_b_and_a">
         
-    <h2 class="ba_text">Before After</h2>
+    <h3 class="ba_text bna_on">BEFORE AFTER</h3>
       
-     <ul class="b_and_a">
+
+      
+     <ul class="b_and_a bna_on">
               
                <li>
                   
@@ -146,39 +157,49 @@
                    <p>그린 하우스</p>
                </li>
                
+               
+               </ul>
+                    
+                    <div class="cf"></div>
+                
+                <h3 class="ba_text cf">GALLERY</h3>
+                
+                   <div class="cf"></div>
+                 
+                <ul class="b_and_a">
+                
+               
                 <li>
                    <div class="image_box_gallery">
-                        <p>이미지가 들어갈 곳 입니다.</p>
+                      
                    </div>
                    <p>제목</p>
                </li>
                
                <li>
                    <div class="image_box_gallery">
-                        <p>이미지가 들어갈 곳 입니다.</p>
+                       
                    </div>
                    <p>제목</p>
                </li>
                
                <li>
                    <div class="image_box_gallery">
-                        <p>이미지가 들어갈 곳 입니다.</p>
+                       
                    </div>
                    <p>제목</p>
                </li>
                
                <li>
                    <div class="image_box_gallery">
-                        <p>이미지가 들어갈 곳 입니다.</p>
+                        
                    </div>
                    <p>제목</p>
                </li>
                
-               
-           </ul>
+                 </ul>
+           
 </div>
-  
-  
   
     <div class="about_id">
         <h2 class="art_title">아트아이디</h2>
@@ -226,34 +247,31 @@
    
         <div class="cf"></div>
         
+
     <div class="main_inquiry">
         
         <h2> 공사문의 </h2>
         
-         <form id="contact-form"> 
-   <!-- 아래 input은 보낼 시 꼭 필요함 --> 
+    <form id="contact-form"> 
+
    <input type="hidden" name="contact_number"> 
-   <label>Name</label> <input type="text" name="to_name"> 
-   <label>From Name</label> 
-   <input type="text" name="from_name"> 
-   <label>Message</label> 
+   <label >이름</label><input type="text" name="to_name" class="name_input"> 
+    <div class="cf"></div>
+   <label>이메일 </label> 
+   <input type="text" name="from_name" class="name_input"> 
    
-   <textarea name="contact"></textarea> 
-   <label>Message</label> 
+   <label>전화번호</label> 
+   <input type="text" name="from_name" class="name_input"> 
    
-   <textarea name="contact"></textarea> 
-   <label>Message</label> 
-   
-   <textarea name="contact"></textarea> 
-   
-   <input type="submit" value="Send">
+    <div class="cf"></div>
+   <label>문의 내용</label> 
+   <textarea name="contact" class="contact"></textarea> 
    
    </form>
         
-    </div>
+</div>
 
 </main>
-
 
 
 <script src="script.js"></script> 
