@@ -1,24 +1,21 @@
-*{margin: 0; padding: 0;}
+*{margin: 0; padding: 0; font-family: 'Noto Sans KR', sans-serif;}
+
 ul,li{
     list-style: none;
 }
-cf:after{
+
+@media screen and (min-width:0px) and (max-width:2560px){
+     body {
+        overflow-x:hidden; 
+        overflow-y:auto;
+    }
+    
+      cf:after{
     content: '';
     display: block;
     clear: both;
 }
-
-main{
-    position: relative;
-    z-index: 10;
-    width: 100%;
-    height: 1400px;
-    margin: 0 auto;
-    background-color: #fff;
-    top: 1200px;
-}
-
-
+    
 .main_cover{
     width: 1200px;
     margin: 0 auto; 
@@ -44,7 +41,7 @@ nav{
     line-height: 60px;
 }
 .sub_nav_0{
-    display: none;
+    display: block;
 }
 
 .sub_nav_0 ul li{
@@ -56,33 +53,53 @@ nav{
 
 .sub_nav_1{
     position: relative;
-    float: right;
     background: #fff;
-    width: 500px;
-    top: 60px;
-    z-index: 5;
-    display: none;
+    width: 100%;
+    height: 60px;
+    top: 0px;
+    z-index: 20;
+    line-height: 60px;
 }
-
+   
+    
+    
+    .sub_nav_1 h3{
+    float: left;
+        padding-left: 20px;
+    }
+    
+    .sub_nav_1 h2 {
+        float: right;
+        padding-right: 20px;
+    }
+    
 .sub_nav_1 ul {
     position: absolute;
+    top: 60px;
     width: 100%;
     background-color: #fff;
     line-height: 60px;
+    display: none;
+    
 }
 .sub_nav_1 ul li{
-    font-size: 26px;
-    padding: 10px;
+    font-size: 20px;
+    padding-left: 10px;
     box-sizing: border-box;
 }
+    
+.sub_nav_1 h2:hover ~ ul{
+        display: block;
+    }
+
 
 article{
     padding-top: 60px;
     position: fixed;
     top: 0px;
     z-index: 1;
-    width: 99.9%;
-    height: 0px;
+    width: 100%;
+    height: 100%;
     padding-bottom: 45%;
     overflow: hidden;
 }
@@ -95,7 +112,7 @@ article ul li{
 
 article ul li img{
     height: auto;
-    width: 100%;
+    width: 120%;
 }
 
 article ul li:nth-child(1){
@@ -110,71 +127,30 @@ article ul li:nth-child(3){
 aside ul{
     padding-top: 80px;
 }
-
-aside{
-    width: 100%;
-    height: 400px;
-}
-
-aside ul li{
-    width: 25%;
-    float: left;
-    text-align: center;
-}
-
-.in_icon {
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-    background-color: aquamarine;
-    border-radius: 50%;
-}
-aside ul li h2{
-    margin-top: 10px;
-}
-
-.art_title{
-    padding-top: 100px;
-}
-
-.all_b_and_a{
-    position: relative;
-    z-index: 15;
-    top: 1000px;
-    width: 100%;
-    height: 1100px;
-    background-color: #fff;
-   
-}
-
-.b_and_a {
-    width: 1800px;
-    height: 200px;
-    margin: 0 auto;
-    background-color: #fff;
- 
-}
-
-.b_and_a li{
-    text-align: center;
-    background-color: #dcdaf8;
-    float: left;
-    margin: 10px;
-    width: 430px;
-    height: 350px;
-    position: relative;
-}
+    
 .ba_text{
-    border-top: 1px solid #333;
-    margin-top: 100px;
+    clear: both;
+    width: 100%;
     padding-top: 50px;
     padding-bottom: 20px;
     text-align: center;
 }
+    
+.b_and_a li{
+    text-align: center;
+    float: left;
+    width: 24%;
+    margin: 5px;
+    height: 370px;
+    position: relative;
+    overflow: hidden;
+}
+    
+
 .image_box{
     margin: 0px auto;
-    width: 430px;
-    height: 330px;
+    width: 100%;
+    height: 320px;
     background-color: #e3ade3;
     background-image:url(img/r1.PNG);
     background-position:right;
@@ -193,20 +169,98 @@ aside ul li h2{
 
 .image_button{
     float: right;
-    margin-top: 100px;
-    width: 20px;
-    height: 20px;
-    background-color: aqua
+    margin-top: 160px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50% 10% 10% 50%;
+    opacity: 0.8;
+    box-shadow: 5px 5px 5px #333;
+    background-color:dodgerblue;
 }
 
 
 .image_box_gallery{
-    width: 430px;
-    height: 330px;
     margin: 0px auto;
-    background-color: aliceblue;
+    width: 100%;
+    height: 320px;
+    background-image:url(img/r2.PNG);
+    background-size: 100%;
+    background-position: center;
+    transition-duration: 0.5s;
 }
 
+.image_box_gallery:hover {
+     background-size: 120%;
+}
+    
+}
+
+
+@media screen and (min-width:1440px) and (max-width:2560px) {
+    
+.sub_nav_0{
+    display: block;
+}
+    
+ .sub_nav_1{
+        display: none;
+    }
+    
+
+main{
+    position: relative;
+    top: 1000px;
+    z-index: 10;
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+aside{
+    width: 100%;
+    height: 400px;
+}
+
+aside ul li{
+    width: 25%;
+    float: left;
+    text-align: center;
+}
+
+
+    
+.in_icon {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    background-color: #333;
+    border-radius: 50%;
+}
+aside ul li h2{
+    margin-top: 10px;
+}
+
+.art_title{
+    padding-top: 100px;
+}
+
+.all_b_and_a{
+    position: relative;
+    z-index: 15;
+    width: 100%;
+    height: 998px;
+    top: 1000px;
+    background-color: #fff;
+}
+
+.b_and_a {
+    width: 95%;
+    height: 250px;
+    margin: 0 auto;
+    background-color: #fff;
+}
 .about_id{
     position: relative;
     text-align: center;
@@ -215,12 +269,319 @@ aside ul li h2{
     top: 1000px;
     z-index: 20;
     color: aliceblue;
+    text-shadow: 1px 1px 5px #333;
 }
 
-.main_inquiry{
-    padding-top: 100px;
-    width: 1200px;
+.main_inquiry{ 
     margin: 0 auto;
+    width: 900px;
+    height: 400px;
+   
+}
+
+.main_inquiry h2 {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.main_inquiry label{
+    width: 20%;
+    height: 30px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.main_inquiry input{
+     float: right;
+     margin-bottom: 10px;
+}
+
+.name_input{
+    width: 70%;
+    height: 30px;
+}
+.contact{
+    width: 100%;
+    height: 100px;
+}
+
+}
+
+@media screen and (min-width:768px) and (max-width:1439px) {
+    
+    .sub_nav_0{
+    display: none;
+}
+    
+       .sub_nav_1{
+    display: block;
+}
+    
+
+main{
+    position: relative;
+    top: 500px;
+    z-index: 10;
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.main_cover{
+    width: 100%;
+    margin: 0 auto; 
+}
+
+
+aside{
+    width: 100%;
+    height: 400px;
+}
+
+aside ul li{
+    width: 25%;
+    float: left;
     text-align: center;
 }
 
+.in_icon {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    background-color: #333;
+    border-radius: 50%;
+}
+aside ul li h2{
+    margin-top: 10px;
+}
+
+.art_title{
+    padding-top: 100px;
+}
+
+.all_b_and_a{
+    position: relative;
+    z-index: 15;
+    width: 100%;
+    height: 1700px;
+    top: 500px;
+    background-color: #fff;
+}
+
+.b_and_a {
+    width: 95%;
+    height: 250px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.b_and_a li{
+    text-align: center;
+    float: left;
+    width: 48%;
+    margin: 5px;
+    height: 370px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about_id{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    top: 500px;
+    z-index: 20;
+    color: aliceblue;
+    text-shadow: 1px 1px 5px #333;
+    background-color: #333;
+}
+
+.main_inquiry{ 
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+   
+}
+
+.main_inquiry h2 {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.main_inquiry label{
+    width: 20%;
+    height: 30px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.main_inquiry input{
+     float: right;
+     margin-bottom: 10px;
+}
+
+.name_input{
+    float: right;
+    width: 70%;
+    height: 30px;
+}
+    
+.contact{
+    width: 100%;
+    height: 100px;
+}
+
+}
+
+@media screen and (min-width:0px) and (max-width:767px) {
+    
+        .sub_nav_0{
+    display: none;
+}
+    
+       .sub_nav_1{
+    display: block;
+}
+    
+body {
+        overflow-x:hidden; 
+        overflow-y:auto;
+    }
+
+aside{
+    width: 100%;
+    height: 400px;
+}
+
+aside ul li{
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.in_icon {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    background-color: #333;
+    border-radius: 50%;
+   
+}
+aside ul li h2{
+    margin-top: 10px;
+}
+
+.art_title{
+    padding-top: 100px;
+}
+
+.all_b_and_a{
+    position: relative;
+    z-index: 15;
+    width: 100%;
+    height: 1300px;
+    top: 250px;
+    background-color: #fff;
+}
+
+.bna_on {
+        display: none;
+    }
+    
+.b_and_a {
+    width: 100%;
+    height: 250px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+.b_and_a li{
+    text-align: center;
+    float: left;
+    width: 99%;
+    height: 100%;
+    margin-bottom: 50px;
+    position: relative;
+    overflow: hidden;
+}
+
+.about_id{
+    position: relative;
+    text-align: center;
+    width: 100%;
+    height: 200px;
+    top: 250px;
+    z-index: 20;
+    color: aliceblue;
+    text-shadow: 1px 1px 5px #333;
+    background-color: #333;
+}
+
+main{
+    position: relative;
+    top: 200px;
+    z-index: 10;
+    width: 100%;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: #fff;
+}
+
+
+.main_cover{
+    width: 100%;
+    margin: 0 auto; 
+    
+}
+    
+.main_inquiry{ 
+    margin: 0 auto;
+    width: 100%;
+    height: 400px;
+    margin-top: 600px;
+   
+}
+
+.main_inquiry h2 {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: aliceblue;
+    margin-bottom: 10px;
+}
+
+.main_inquiry label{
+    width: 20%;
+    height: 30px;
+    line-height: 35px;
+    margin-bottom: 10px;
+    float: left;
+}
+
+.main_inquiry input{
+     float: right;
+     margin-bottom: 10px;
+}
+
+.name_input{
+    float: right;
+    width: 70%;
+    height: 30px;
+}
+    
+.contact{
+    width: 100%;
+    height: 100px;
+}
+
+}
